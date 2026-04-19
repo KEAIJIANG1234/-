@@ -22,5 +22,5 @@ if result.empty:
 else:          
     st.dataframe(result[["危险源","可能后果","危险等级","D值","控制措施"]])
 else:
-     st.info
+     st.info("请输入关键词")
 

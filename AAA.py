@@ -17,10 +17,10 @@ pd.set_option('display.width', 200)
 keyword=st.text_input("危险源：")
 if keyword:
     result=df[df["危险源"].str.contains(keyword,na=False)]
-if result.empty:
-    st.warning("待扩展....")
-else:          
-    st.dataframe(result[["危险源","可能后果","危险等级","D值","控制措施"]])
+    if result.empty:
+        st.warning("待扩展....")
+    else:          
+        st.dataframe(result[["危险源","可能后果","危险等级","D值","控制措施"]])
 else:
      st.info("请输入关键词")
 

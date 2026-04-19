@@ -2,8 +2,8 @@ import pandas as pd
 import streamlit as st
 pd.set_option('display.max_columns',None)
 pd.set_option('display.max_colwidth',None)
-df=pd.read_excel("data.xlsx")
-print("可爱酱很可爱")
+df=pd.read_excel("data.xlsx",engine="openpyxl")
+
 df["D值"]=df["L"]*df["E"]*df["C"]
 pd.set_option('display.unicode.ambiguous_as_wide', True)
 pd.set_option('display.unicode.east_asian_width', True)

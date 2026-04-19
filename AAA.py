@@ -2,7 +2,8 @@ import pandas as pd
 import streamlit as st
 pd.set_option('display.max_columns',None)
 pd.set_option('display.max_colwidth',None)
-df=pd.read_excel("data.xlsx",engine="openpyxl")
+try:
+    df=pd.read_excel("data.xlsx",engine="openpyxl")
 st.success("Excel读取成功！")
 except Exception as e:
     st.error(f"读取Excel失败:{e}")
